@@ -1,5 +1,5 @@
-import { useProducts } from './hooks/useProducts';
-import { formatPrice } from './utils/formatPrice';
+import { ProductCard } from "./components/ProductCard/ProductCard";
+import { useProducts } from "./hooks/useProducts";
 
 function App() {
   const { products, isLoading, error } = useProducts();
@@ -10,13 +10,15 @@ function App() {
   return (
     <main>
       <h1>Econverse</h1>
-      <ul>
+      <div style={{ display: "flex", gap: 20, padding: 40, flexWrap: "wrap" }}>
         {products.map((product) => (
-          <li key={product.productName}>
-            {product.productName} | {formatPrice(product.price)}
-          </li>
+          <ProductCard
+            key={product.productName}
+            product={product}
+            onSelect={(selected) => console.log(selected)}
+          />
         ))}
-      </ul>
+      </div>
     </main>
   );
 }

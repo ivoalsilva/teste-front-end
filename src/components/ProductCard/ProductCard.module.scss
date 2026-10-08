@@ -1,0 +1,66 @@
+@use "../../styles/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 304px;
+  height: 500px;
+  padding: 14px 14px 16px; // 16px embaixo deixa o botão em Y 440
+  background: $color-white;
+  border-radius: 10px;
+  box-shadow: 0 3px 19px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 206px;
+  margin-top: 27px; // Y 41
+  object-fit: contain;
+}
+
+.name {
+  display: -webkit-box;
+  min-height: 46px; // reserva 2 linhas, mesmo com nome curto
+  margin-top: 22px; // Y 269
+  font-size: 15px;
+  font-weight: $fw-light;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.oldPrice {
+  margin-top: 12px; // Y 327
+  font-size: 16px;
+  color: $color-gray-price;
+  text-decoration: line-through;
+}
+
+.price {
+  margin-top: 2px; // espaço do Layout automático do grupo "preco"
+  font-size: 20px;
+  font-weight: $fw-bold;
+}
+
+.installments {
+  margin-top: 2px; // Y 385
+  font-size: 12px;
+}
+
+.shipping {
+  margin-top: 7px; // Y 410
+  font-size: 12px;
+  color: $color-blue;
+}
+
+.button {
+  height: 44px;
+  margin-top: auto;
+  border-radius: 4px;
+  background: $color-blue;
+  color: $color-white;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+}
