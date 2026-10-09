@@ -1,0 +1,150 @@
+@use "../../styles/variables" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.54);
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 87px; // foto termina em 303px, coluna começa em 390px
+  width: 769px;
+  height: 299px;
+  padding: 56px 0 0 56px;
+  border-radius: 6px;
+  background: $color-white;
+}
+
+.close {
+  position: absolute;
+  top: 7px;
+  right: 19px;
+  display: flex;
+  padding: 10px; // área de clique maior que o ícone de 13px
+  color: $color-icon;
+}
+
+.image {
+  width: 247px;
+  height: 192px;
+  object-fit: contain;
+}
+
+// Coluna da direita (Frame 23204)
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 328px;
+  margin-top: 7px; // coluna começa 63px do topo; a foto, 56px
+}
+
+// Nome + preço (Frame 23200)
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.name,
+.price {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.name {
+  height: 16.86px; // altura da caixa no Figma (o texto de 20px ultrapassa, como lá)
+  font-weight: $fw-regular;
+  text-transform: uppercase;
+}
+
+.price {
+  height: 17px; // altura da caixa no Figma
+  font-weight: $fw-semibold;
+}
+
+
+// Descrição + link (Frame 23201)
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 290px;
+  font-family: $font-family-secondary;
+  letter-spacing: 0.05em;
+}
+
+.description {
+  min-height: 18.55px; // altura da caixa no Figma
+  font-size: 10px;
+  font-weight: $fw-medium;
+  line-height: 1.505;
+  color: $color-gray-medium;
+}
+
+.link {
+  height: 10px; // altura da caixa no Figma
+  font-size: 11px;
+  font-weight: $fw-semibold;
+  line-height: 1;
+  color: $color-blue;
+}
+
+
+// Quantidade + botão (Frame 23203)
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  width: 110px;
+  height: 36px;
+  border: 1px solid $color-border-light;
+  border-radius: 4px;
+}
+
+.quantityButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 100%;
+  color: $color-purple;
+
+  &:disabled {
+    color: $color-gray-medium;
+    cursor: default;
+  }
+}
+
+.quantityValue {
+  flex: 1;
+  font-size: 16px;
+  font-weight: $fw-medium;
+  line-height: 1;
+  text-align: center;
+  color: $color-purple;
+}
+
+.buyButton {
+  width: 188px;
+  height: 36px;
+  border-radius: 6px;
+  background: $color-yellow;
+  color: $color-purple;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+}
