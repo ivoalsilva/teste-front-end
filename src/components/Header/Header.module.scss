@@ -1,0 +1,121 @@
+@use "../../styles/variables" as *;
+
+.header {
+  position: relative;
+  z-index: 10; // a sombra do menu fica por cima do banner
+  width: $container-width;
+  margin: 0 auto;
+  background: $color-white;
+}
+
+// Faixa de benefícios (Y 0 a 32)
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 119px;
+  height: 32px;
+  border-bottom: 1px solid $color-divider; // Line 16
+}
+
+.benefit {
+  display: flex;
+  align-items: center; // estimado: o Y do texto dentro do item não foi medido
+  gap: 9px;
+  font-size: 12px;
+  font-weight: $fw-medium;
+  color: $color-gray-medium;
+
+  strong {
+    font-weight: $fw-semibold;
+    color: $color-blue-dark;
+  }
+}
+
+// Logo, busca e ícones (Y 32 a 104)
+.main {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  border-bottom: 1px solid $color-divider; // Line 17
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 630px;
+  height: 48px;
+  margin-left: 186px; // a busca começa em X 325 e o logo termina em 139
+  padding: 0 24px 0 16px;
+  border-radius: 10px;
+  background: $color-search-bg;
+
+  // O contorno de foco vai na caixa inteira, não só no input
+  &:focus-within {
+    outline: 2px solid $color-blue;
+  }
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  font-size: 14px;
+  font-weight: $fw-medium;
+  color: $color-gray-dark;
+
+  &::placeholder {
+    color: $color-gray-medium;
+  }
+}
+
+.searchButton {
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  align-items: flex-start; // no Figma, a caixa (25px) fica alinhada ao topo dos ícones de 32px
+  gap: 32px;
+  margin-left: auto;
+  margin-right: -1px; // no Figma, o carrinho ultrapassa a borda em 1px
+}
+
+.action {
+  display: block;
+}
+
+// Menu de categorias (Y 104 a 144)
+.menu {
+  height: 40px;
+  padding-left: 69px;
+  box-shadow: 0 8px 16px rgba(57, 48, 19, 0.12);
+}
+
+
+.menuList {
+  display: flex;
+  align-items: center;
+  gap: 91px;
+  height: 100%;
+}
+
+.menuLink {
+  font-size: 12px;
+  font-weight: $fw-semibold;
+  text-transform: uppercase;
+  color: $color-gray-medium;
+}
+
+.highlight {
+  color: $color-blue-dark;
+}
+
+.subscription {
+  display: flex;
+  align-items: flex-start; // no Figma, o texto fica no topo da coroa (Y 0), não centralizado
+  gap: 12px;
+}

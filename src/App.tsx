@@ -1,25 +1,30 @@
-import { useState } from 'react'
-import { ProductModal } from './components/ProductModal/ProductModal'
-import { ProductShelf } from './components/ProductShelf/ProductShelf'
-import { useProducts } from './hooks/useProducts'
-import type { Product } from './types/product'
+import { useState } from "react";
+import { Header } from "./components/Header/Header";
+import { ProductModal } from "./components/ProductModal/ProductModal";
+import { ProductShelf } from "./components/ProductShelf/ProductShelf";
+import { useProducts } from "./hooks/useProducts";
+import type { Product } from "./types/product";
 
 function App() {
-  const { products, isLoading, error } = useProducts()
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
-
-  if (isLoading) return <p>Carregando...</p>
-  if (error) return <p>{error}</p>
+  const { products, isLoading, error } = useProducts();
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   return (
-    <main>
-      <h1>Econverse</h1>
-      <ProductShelf
-        title="Produtos relacionados"
-        products={products}
-        onSelectProduct={setSelectedProduct}
-        showTabs
-      />
+    <>
+      <Header />
+
+      <main>
+        {isLoading && <p>Carregando...</p>}
+        {error && <p>{error}</p>}
+        {!isLoading && !error && (
+          <ProductShelf
+            title="Produtos relacionados"
+            products={products}
+            onSelectProduct={setSelectedProduct}
+            showTabs
+          />
+        )}
+      </main>
 
       {selectedProduct && (
         <ProductModal
@@ -28,8 +33,8 @@ function App() {
           onClose={() => setSelectedProduct(null)}
         />
       )}
-    </main>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
