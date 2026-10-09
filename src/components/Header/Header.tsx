@@ -77,10 +77,12 @@ export function Header() {
         >
           <input
             type="search"
+            name="q"
             className={styles.searchInput}
             placeholder="O que você está buscando?"
             aria-label="Buscar produtos"
           />
+
           <button
             type="submit"
             className={styles.searchButton}
