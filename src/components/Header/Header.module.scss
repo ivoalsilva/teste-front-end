@@ -99,11 +99,13 @@
 .menuList {
   display: flex;
   align-items: center;
-  gap: 91px;
+  justify-content: space-between; // prende o 1º e o último item nas posições do Figma
+  width: 1141px; // largura do Frame 880
   height: 100%;
 }
 
 .menuLink {
+  display: block;
   font-size: 12px;
   font-weight: $fw-semibold;
   text-transform: uppercase;
