@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+
+  // Linhas decorativas dos dois lados do título
+  &::before,
+  &::after {
+    content: '';
+    width: 360px;
+    height: 1px;
+    margin-bottom: 9px; // no Figma a linha fica 4.5px acima do centro do texto
+    background: $color-line;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: $fw-bold;
+  color: $color-blue;
+}

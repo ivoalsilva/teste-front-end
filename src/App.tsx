@@ -1,3 +1,4 @@
+import { SectionTitle } from "./components/SectionTitle/SectionTitle";
 import { ProductCard } from "./components/ProductCard/ProductCard";
 import { useProducts } from "./hooks/useProducts";
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <main>
       <h1>Econverse</h1>
+      <SectionTitle title="Produtos relacionados" />
       <div style={{ display: "flex", gap: 20, padding: 40, flexWrap: "wrap" }}>
         {products.map((product) => (
           <ProductCard
