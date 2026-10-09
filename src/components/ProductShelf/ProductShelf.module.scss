@@ -1,0 +1,102 @@
+@use '../../styles/variables' as *;
+
+.shelf {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+// Abas
+.tabs {
+  display: flex;
+  margin-top: 4px;
+}
+
+.tabItem {
+  flex: 1;
+
+  // Sobrepõe 1px para as bordas vizinhas não ficarem duplas (espaço -1 no Figma)
+  & + & {
+    margin-left: -1px;
+  }
+}
+
+.tab {
+  width: 100%;
+  height: 40px;
+  border: 1px solid $color-border;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-gray-dark;
+}
+
+.active {
+  font-weight: $fw-bold;
+  color: $color-blue;
+}
+
+// Carrossel
+.carousel {
+  position: relative;
+  margin-top: 24px;
+}
+
+.viewport {
+  // 4 cards (1272px) + 18px de cada lado para a sombra aparecer
+  width: 1308px;
+  // Margens negativas compensam o padding: os cards continuam no mesmo lugar
+  margin: -24px -14px;
+  padding: 24px 18px;
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  gap: 18px;
+  transition: transform 0.3s ease;
+}
+
+.item {
+  flex-shrink: 0;
+  visibility: hidden;
+  // Ao sair da área visível, o card só some depois que o deslize termina
+  transition: visibility 0s linear 0.3s;
+}
+
+.visible {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: $color-white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: $color-gray-dark;
+  transform: translateY(-50%);
+}
+
+.arrow:disabled {
+  cursor: default;
+}
+
+.prev {
+  left: -42px;
+}
+
+.next {
+  right: -42px;
+
+  svg {
+    transform: rotate(180deg);
+  }
+}

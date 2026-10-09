@@ -1,5 +1,4 @@
-import { SectionTitle } from "./components/SectionTitle/SectionTitle";
-import { ProductCard } from "./components/ProductCard/ProductCard";
+import { ProductShelf } from "./components/ProductShelf/ProductShelf";
 import { useProducts } from "./hooks/useProducts";
 
 function App() {
@@ -11,16 +10,12 @@ function App() {
   return (
     <main>
       <h1>Econverse</h1>
-      <SectionTitle title="Produtos relacionados" />
-      <div style={{ display: "flex", gap: 20, padding: 40, flexWrap: "wrap" }}>
-        {products.map((product) => (
-          <ProductCard
-            key={product.productName}
-            product={product}
-            onSelect={(selected) => console.log(selected)}
-          />
-        ))}
-      </div>
+      <ProductShelf
+        title="Produtos relacionados"
+        products={products}
+        onSelectProduct={(product) => console.log(product)}
+        showTabs
+      />
     </main>
   );
 }
