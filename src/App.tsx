@@ -7,6 +7,8 @@ import { ProductModal } from "./components/ProductModal/ProductModal";
 import { ProductShelf } from "./components/ProductShelf/ProductShelf";
 import { useProducts } from "./hooks/useProducts";
 import type { Product } from "./types/product";
+import { PartnerBanners } from './components/PartnerBanners/PartnerBanners'
+
 
 function App() {
   const { products, isLoading, error } = useProducts();
@@ -36,9 +38,8 @@ function App() {
         <div className={styles.sections}>
           <Categories />
           {renderShelf({ showTabs: true })}
-          {/* banner apoio 1 (Parceiros) */}
-          {renderShelf({ showViewAll: true })}
-          {/* banner apoio 2 (Parceiros) */}
+          <PartnerBanners />
+          {renderShelf({ showViewAll: true })}<PartnerBanners />
           {/* Navegue por marcas */}
           {renderShelf({ showViewAll: true })}
         </div>

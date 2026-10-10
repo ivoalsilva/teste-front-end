@@ -1,0 +1,75 @@
+@use "../../styles/variables" as *;
+
+.partners {
+  display: flex;
+  gap: 13px;
+  width: 1281px;
+  margin-left: calc(
+    50% - 641px
+  ); // X 79 no Figma: começa 1px antes do container e termina junto com ele
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 634px;
+  height: 350px;
+  padding: 114px 0 0 44.18px;
+  border-radius: 20px;
+  overflow: hidden; // recorta a foto e o degradê nos cantos arredondados
+  background: #000000 url("../../assets/partner.webp") center / cover no-repeat;
+
+  // Degradê escuro na parte de baixo (Rectangle 107 no Figma)
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 261px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
+    opacity: 0.8;
+  }
+}
+
+// Textos e botão ficam por cima do degradê
+.title,
+.text,
+.button {
+  position: relative;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: $fw-bold;
+  line-height: 60px;
+  color: $color-white;
+}
+
+.text {
+  width: 199.92px; // largura do Figma: quebra o texto em 2 linhas
+  margin-top: 8px; // Y 182: o título termina em 174
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-white;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144.69px;
+  height: 48px;
+  margin-top: 32px; // Y 262: o texto termina em 230
+  border-radius: 6px;
+  background: $color-yellow;
+  font-size: 16px;
+  font-weight: $fw-bold;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-purple;
+}
