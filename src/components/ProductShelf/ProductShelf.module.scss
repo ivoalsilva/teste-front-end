@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .shelf {
   width: $container-width;
@@ -35,9 +35,22 @@
   color: $color-blue;
 }
 
+// "Ver todos" (vitrines 2 e 3)
+.viewAll {
+  display: block;
+  width: fit-content;
+  height: 23px; // caixa de 23px no Figma
+  margin: 4px auto 0; // 4px abaixo do título, como as abas da vitrine 1
+  font-size: 15px;
+  font-weight: $fw-bold;
+  line-height: 22px;
+  color: $color-gray-dark;
+}
+
 // Carrossel
 .carousel {
   position: relative;
+  display: flow-root; // impede o colapso da margem com a do .viewport: o topo do carrossel fica no topo dos cards
   margin-top: 24px;
 }
 
@@ -68,10 +81,9 @@
   transition-delay: 0s;
 }
 
-
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 246.5px; // medido nas vitrines 2 e 3: 12px abaixo do centro dos cards
   z-index: 1;
   display: flex;
   align-items: center;
@@ -82,7 +94,6 @@
   background: $color-white;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   color: $color-gray-dark;
-  transform: translateY(-50%);
 }
 
 .arrow:disabled {
@@ -90,11 +101,11 @@
 }
 
 .prev {
-  left: -42px;
+  left: -42.5px; // X 37.5 no Figma
 }
 
 .next {
-  right: -42px;
+  right: -41.5px; // termina em X 1401.5 no Figma
 
   svg {
     transform: rotate(180deg);

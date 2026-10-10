@@ -1,0 +1,7 @@
+// Seções abaixo do banner, com o espaçamento do Figma
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 90px; // espaço entre todas as seções no Figma
+  margin-top: 39px; // do banner até as categorias
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./App.module.scss";
 import { Banner } from "./components/Banner/Banner";
 import { Categories } from "./components/Categories/Categories";
 import { Header } from "./components/Header/Header";
@@ -11,25 +12,39 @@ function App() {
   const { products, isLoading, error } = useProducts();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
+  function renderShelf(options: { showTabs?: boolean; showViewAll?: boolean }) {
+    if (isLoading) return <p>Carregando produtos...</p>;
+    if (error) return <p>{error}</p>;
+
+    return (
+      <ProductShelf
+        title="Produtos relacionados"
+        products={products}
+        onSelectProduct={setSelectedProduct}
+        {...options}
+      />
+    );
+  }
+
   return (
     <>
       <Header />
 
       <main>
         <Banner />
-        <Categories />
 
-        {isLoading && <p>Carregando...</p>}
-        {error && <p>{error}</p>}
-        {!isLoading && !error && (
-          <ProductShelf
-            title="Produtos relacionados"
-            products={products}
-            onSelectProduct={setSelectedProduct}
-            showTabs
-          />
-        )}
+        <div className={styles.sections}>
+          <Categories />
+          {renderShelf({ showTabs: true })}
+          {/* banner apoio 1 (Parceiros) */}
+          {renderShelf({ showViewAll: true })}
+          {/* banner apoio 2 (Parceiros) */}
+          {/* Navegue por marcas */}
+          {renderShelf({ showViewAll: true })}
+        </div>
       </main>
+
+      {/* Newsletter + footer */}
 
       {selectedProduct && (
         <ProductModal

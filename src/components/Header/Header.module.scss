@@ -78,7 +78,7 @@
 
 .actions {
   display: flex;
-  align-items: flex-start; // no Figma, a caixa (25px) fica alinhada ao topo dos ícones de 32px
+  align-items: center; // ajuste intencional: no Figma o ícone da caixa (25px) ficava 3.5px acima dos outros
   gap: 32px;
   margin-left: auto;
   margin-right: -1px; // no Figma, o carrinho ultrapassa a borda em 1px

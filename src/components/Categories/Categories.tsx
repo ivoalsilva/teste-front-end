@@ -13,14 +13,13 @@ interface Category {
   active?: boolean;
   // Exceções do Figma, aplicadas só onde o layout difere do padrão
   itemWidth?: number;
-  textOffset?: number;
   iconSize?: number;
   iconOffsetY?: number;
 }
 
 const CATEGORIES: Category[] = [
-  { label: "Tecnologia", icon: tecnologiaIcon, active: true, textOffset: -5 },
-  { label: "Supermercado", icon: supermercadoIcon, textOffset: -8 },
+  { label: "Tecnologia", icon: tecnologiaIcon, active: true },
+  { label: "Supermercado", icon: supermercadoIcon },
   { label: "Bebidas", icon: bebidasIcon, itemWidth: 140 },
   { label: "Ferramentas", icon: ferramentasIcon },
   { label: "Saúde", icon: saudeIcon },
@@ -30,7 +29,7 @@ const CATEGORIES: Category[] = [
 
 export function Categories() {
   return (
-    <section className={styles.categories} aria-label="Compre por categoria">
+    <section aria-label="Compre por categoria">
       <ul className={styles.list}>
         {CATEGORIES.map((category) => (
           <li
@@ -54,12 +53,7 @@ export function Categories() {
                   }}
                 />
               </span>
-              <span
-                className={styles.name}
-                style={{ left: category.textOffset }}
-              >
-                {category.label}
-              </span>
+              <span className={styles.name}>{category.label}</span>
             </a>
           </li>
         ))}

@@ -1,9 +1,5 @@
 @use "../../styles/variables" as *;
 
-.categories {
-  margin-top: 39px; // o banner termina em Y 534 e as categorias começam em 573
-}
-
 .list {
   display: flex;
   justify-content: center;
@@ -39,7 +35,6 @@
 }
 
 .name {
-  position: relative;
   margin-top: 22px;
   font-size: 14px;
   font-weight: $fw-medium;

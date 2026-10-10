@@ -28,6 +28,7 @@ interface ProductShelfProps {
   products: Product[];
   onSelectProduct: (product: Product) => void;
   showTabs?: boolean;
+  showViewAll?: boolean;
 }
 
 export function ProductShelf({
@@ -35,6 +36,7 @@ export function ProductShelf({
   products,
   onSelectProduct,
   showTabs = false,
+  showViewAll = false,
 }: ProductShelfProps) {
   const [activeTab, setActiveTab] = useState(TABS[0]);
   const [firstVisible, setFirstVisible] = useState(0);
@@ -66,6 +68,12 @@ export function ProductShelf({
             </li>
           ))}
         </ul>
+      )}
+
+      {showViewAll && (
+        <a href="#" className={styles.viewAll}>
+          Ver todos
+        </a>
       )}
 
       <div className={styles.carousel}>
