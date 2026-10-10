@@ -1,0 +1,20 @@
+@use "../../styles/variables" as *;
+
+.list {
+  display: flex;
+  justify-content: center; // ajuste intencional: no Figma a fileira ficava 7px à esquerda do centro
+  gap: 42px;
+  margin-top: 32px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 211px;
+  height: 211px;
+  padding: 87px 47px; // igual ao Figma: o logo fica 1.1px acima do centro
+  border-radius: 50%;
+  background: $color-white;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.13);
+}

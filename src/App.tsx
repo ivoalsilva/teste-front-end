@@ -1,14 +1,14 @@
 import { useState } from "react";
 import styles from "./App.module.scss";
 import { Banner } from "./components/Banner/Banner";
+import { Brands } from "./components/Brands/Brands";
 import { Categories } from "./components/Categories/Categories";
 import { Header } from "./components/Header/Header";
+import { PartnerBanners } from "./components/PartnerBanners/PartnerBanners";
 import { ProductModal } from "./components/ProductModal/ProductModal";
 import { ProductShelf } from "./components/ProductShelf/ProductShelf";
 import { useProducts } from "./hooks/useProducts";
 import type { Product } from "./types/product";
-import { PartnerBanners } from './components/PartnerBanners/PartnerBanners'
-
 
 function App() {
   const { products, isLoading, error } = useProducts();
@@ -39,8 +39,9 @@ function App() {
           <Categories />
           {renderShelf({ showTabs: true })}
           <PartnerBanners />
-          {renderShelf({ showViewAll: true })}<PartnerBanners />
-          {/* Navegue por marcas */}
+          {renderShelf({ showViewAll: true })}
+          <PartnerBanners />
+          <Brands />
           {renderShelf({ showViewAll: true })}
         </div>
       </main>
