@@ -9,6 +9,7 @@ import { ProductModal } from "./components/ProductModal/ProductModal";
 import { ProductShelf } from "./components/ProductShelf/ProductShelf";
 import { useProducts } from "./hooks/useProducts";
 import type { Product } from "./types/product";
+import { Newsletter } from "./components/Newsletter/Newsletter";
 
 function App() {
   const { products, isLoading, error } = useProducts();
@@ -43,10 +44,11 @@ function App() {
           <PartnerBanners />
           <Brands />
           {renderShelf({ showViewAll: true })}
+          <Newsletter />
         </div>
       </main>
 
-      {/* Newsletter + footer */}
+      {/* Footer */}
 
       {selectedProduct && (
         <ProductModal

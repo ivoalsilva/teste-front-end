@@ -1,0 +1,109 @@
+@use "../../styles/variables" as *;
+
+.newsletter {
+  background: $color-purple;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 124px; // o formulário começa 639px depois do início do texto (515 + 124)
+  width: $container-width;
+  height: 162px;
+  margin: 0 auto;
+}
+
+// Título + texto (Frame 23197)
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 515px;
+}
+
+.title {
+  font-family: $font-family-title;
+  font-size: 32px;
+  font-weight: $fw-semibold;
+  line-height: 38px;
+  color: $color-white;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: $fw-light;
+  line-height: 18px;
+  color: $color-white;
+}
+
+// Formulário (infos)
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fields {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  width: 233px;
+  height: 42px;
+  padding: 0 24px;
+  border: 1px solid $color-input-border;
+  border-radius: 8px;
+  background: $color-white;
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-gray-dark; // texto digitado: não definido no Figma
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 157px;
+  height: 42px;
+  border-radius: 8px;
+  background: $color-yellow;
+  font-size: 14px;
+  font-weight: $fw-semibold;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: $color-button-text;
+}
+
+// Checkbox + texto (Select)
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-white;
+  cursor: pointer;
+}
+
+.checkbox {
+  appearance: none; // remove o visual padrão do navegador para aplicar o do Figma
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  border: 1px solid $color-checkbox-border;
+  border-radius: 1px;
+  background: $color-checkbox-bg;
+  cursor: pointer;
+
+  // Estado marcado: não definido no Figma
+  &:checked {
+    border-color: $color-yellow;
+    background: $color-yellow;
+  }
+}

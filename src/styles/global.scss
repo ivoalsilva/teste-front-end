@@ -36,3 +36,13 @@ a {
 ul {
   list-style: none;
 }
+
+// Esconde visualmente, mas mantém o conteúdo para leitores de tela
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
