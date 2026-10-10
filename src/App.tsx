@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Banner } from "./components/Banner/Banner";
+import { Categories } from "./components/Categories/Categories";
 import { Header } from "./components/Header/Header";
 import { ProductModal } from "./components/ProductModal/ProductModal";
 import { ProductShelf } from "./components/ProductShelf/ProductShelf";
@@ -16,6 +17,7 @@ function App() {
 
       <main>
         <Banner />
+        <Categories />
 
         {isLoading && <p>Carregando...</p>}
         {error && <p>{error}</p>}
