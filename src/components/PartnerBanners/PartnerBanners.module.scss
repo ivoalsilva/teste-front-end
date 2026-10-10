@@ -4,9 +4,7 @@
   display: flex;
   gap: 13px;
   width: 1281px;
-  margin-left: calc(
-    50% - 641px
-  ); // X 79 no Figma: começa 1px antes do container e termina junto com ele
+  margin-left: calc(50% - 641px); // começa 1px antes do container e termina junto com ele
 }
 
 .card {
@@ -22,7 +20,7 @@
   overflow: hidden; // recorta a foto e o degradê nos cantos arredondados
   background: #000000 url('../../assets/partner.webp') center / cover no-repeat;
 
-  // Degradê escuro na parte de baixo (Rectangle 107 no Figma)
+  // Degradê escuro na parte de baixo
   &::before {
     content: '';
     position: absolute;
@@ -51,7 +49,7 @@
 
 .text {
   width: 199.92px; // largura do Figma: quebra o texto em 2 linhas
-  margin-top: 8px; // Y 182: o título termina em 174
+  margin-top: 8px;
   font-size: 16px;
   line-height: 24px;
   color: $color-white;
@@ -63,7 +61,7 @@
   justify-content: center;
   width: 144.69px;
   height: 48px;
-  margin-top: 32px; // Y 262: o texto termina em 230
+  margin-top: 32px;
   border-radius: 6px;
   background: $color-yellow;
   font-size: 16px;

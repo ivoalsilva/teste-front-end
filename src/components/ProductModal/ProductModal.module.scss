@@ -37,7 +37,7 @@
   object-fit: contain;
 }
 
-// Coluna da direita (Frame 23204)
+// Coluna da direita
 .info {
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@
   margin-top: 7px; // coluna começa 63px do topo; a foto, 56px
 }
 
-// Nome + preço (Frame 23200)
+// Nome + preço
 .heading {
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@
   font-weight: $fw-semibold;
 }
 
-// Descrição + link (Frame 23201)
+// Descrição + link
 .details {
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@
   color: $color-blue;
 }
 
-// Quantidade + botão (Frame 23203)
+// Quantidade + botão
 .actions {
   display: flex;
   align-items: center;

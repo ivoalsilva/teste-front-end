@@ -6,7 +6,7 @@
   // Cor de fundo enquanto a imagem carrega, para o texto branco continuar legível
   background: #000000 url('../../assets/banner.webp') center / cover no-repeat;
 
-  // Degradê escuro por trás dos textos (Rectangle 108 no Figma)
+  // Degradê escuro por trás dos textos
   &::before {
     content: '';
     position: absolute;
@@ -32,7 +32,7 @@
 
 .title {
   width: 822px; // quebra a linha depois de "nossas", como no Figma
-  margin-left: 1px; // X 81
+  margin-left: 1px;
   font-size: 48px;
   font-weight: $fw-semibold;
   line-height: 50px;
@@ -40,12 +40,12 @@
 }
 
 .subtitle {
-  margin-top: 18px; // Y 196: o título termina em 178
-  margin-left: -2px; // X 78
+  margin-top: 18px;
+  margin-left: -2px;
   font-size: 32px;
   font-weight: $fw-regular;
   line-height: 48px;
-  color: $color-white; // a confirmar no Figma (Preenchimento de "nos produtos")
+  color: $color-white;
 
   strong {
     font-weight: $fw-bold;
@@ -59,8 +59,8 @@
   justify-content: center;
   width: 206px;
   height: 50px;
-  margin-top: 41px; // Y 285: o subtítulo termina em 244
-  margin-left: 7px; // X 87
+  margin-top: 41px;
+  margin-left: 7px;
   border-radius: 5px;
   background: $color-yellow;
   font-size: 16px;

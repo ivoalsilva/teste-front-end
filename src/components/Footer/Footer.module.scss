@@ -13,7 +13,7 @@
   margin: 0 auto;
 }
 
-// Logo, texto e redes sociais (Frame 85)
+// Logo, texto e redes sociais
 .brand {
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@
   background: $color-footer-divider;
 }
 
-// Colunas de links (Frame 81): larguras do Figma, sem depender da renderização do texto
+// Colunas de links: larguras do Figma, sem depender da renderização do texto
 .links {
   display: grid;
   grid-template-columns: 121px 150px 160px;
@@ -86,7 +86,7 @@
   color: $color-footer-text;
 }
 
-// Faixa de copyright (Group 1999)
+// Faixa de copyright
 .copyright {
   display: flex;
   align-items: center;

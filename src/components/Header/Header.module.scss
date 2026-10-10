@@ -15,12 +15,12 @@
   justify-content: center;
   gap: 119px;
   height: 32px;
-  border-bottom: 1px solid $color-divider; // Line 16
+  border-bottom: 1px solid $color-divider;
 }
 
 .benefit {
   display: flex;
-  align-items: center; // estimado: o Y do texto dentro do item não foi medido
+  align-items: center;
   gap: 9px;
   font-size: 12px;
   font-weight: $fw-medium;
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   height: 72px;
-  border-bottom: 1px solid $color-divider; // Line 17
+  border-bottom: 1px solid $color-divider;
 }
 
 .search {
@@ -99,7 +99,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between; // prende o 1º e o último item nas posições do Figma
-  width: 1141px; // largura do Frame 880
+  width: 1141px;
   height: 100%;
 }
 

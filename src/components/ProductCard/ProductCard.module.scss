@@ -15,14 +15,14 @@
 .image {
   width: 100%;
   height: 206px;
-  margin-top: 27px; // Y 41
+  margin-top: 27px;
   object-fit: contain;
 }
 
 .name {
   display: -webkit-box;
   min-height: 46px; // reserva 2 linhas, mesmo com nome curto
-  margin-top: 22px; // Y 269
+  margin-top: 22px;
   font-size: 15px;
   font-weight: $fw-light;
   overflow: hidden;
@@ -31,7 +31,7 @@
 }
 
 .oldPrice {
-  margin-top: 12px; // Y 327
+  margin-top: 12px;
   font-size: 16px;
   color: $color-gray-price;
   text-decoration: line-through;
@@ -44,12 +44,12 @@
 }
 
 .installments {
-  margin-top: 2px; // Y 385
+  margin-top: 2px;
   font-size: 12px;
 }
 
 .shipping {
-  margin-top: 7px; // Y 410
+  margin-top: 7px;
   font-size: 12px;
   color: $color-blue;
 }
