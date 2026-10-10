@@ -1,0 +1,100 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  background: $color-footer-bg;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  width: $container-width;
+  height: 282px;
+  margin: 0 auto;
+}
+
+// Logo, texto e redes sociais (Frame 85)
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  width: 354px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: $fw-light;
+  line-height: 21px;
+  color: $color-gray-dark;
+}
+
+.social {
+  display: flex;
+  gap: 26px;
+
+  a {
+    display: block;
+  }
+}
+
+// Linha vertical (Line 4): ocupa a altura útil do footer (282 - 42 - 42)
+.divider {
+  align-self: stretch;
+  width: 1px;
+  margin: 42px -1px 42px 0; // no Figma a linha tem largura 0: o -1px mantém os links em X 614
+  background: $color-footer-divider;
+}
+
+// Colunas de links (Frame 81): larguras do Figma, sem depender da renderização do texto
+.links {
+  display: grid;
+  grid-template-columns: 121px 150px 160px;
+  column-gap: 100px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.groupTitle {
+  font-size: 16px;
+  font-weight: $fw-bold;
+  line-height: 16px;
+  color: $color-footer-text;
+}
+
+.groupList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link {
+  display: block; // sem isso o <li> herda a altura de linha do body (24px) em vez de 16px
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-footer-text;
+}
+
+// Faixa de copyright (Group 1999)
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46.84px;
+  background: $color-white;
+  font-size: 13px;
+  font-weight: $fw-light;
+  line-height: 20px;
+  color: $color-gray-dark;
+}

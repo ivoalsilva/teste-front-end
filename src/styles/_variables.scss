@@ -13,19 +13,21 @@ $color-line: #dedede; // linhas finas e bordas
 $color-border: #bdbdbd;
 $color-border-light: #d9d9d9; // borda da caixa de quantidade
 $color-icon: #707070; // ícone de fechar
-$font-family-secondary: 'Work Sans', sans-serif;
+$font-family-secondary: "Work Sans", sans-serif;
 $color-category-bg: #f4f4f4; // fundo das caixas de categoria
 $color-gray-text: #4e4e4e; // texto das categorias ("PRETO" no Figma)
-$font-family-title: 'Outfit', sans-serif; // título da newsletter
+$font-family-title: "Outfit", sans-serif; // título da newsletter
 $color-input-border: #e7e7e7;
 $color-placeholder: #676767;
 $color-checkbox-bg: #f6f6f6;
 $color-checkbox-border: #8c342b;
 $color-button-text: #161615; // texto do botão da newsletter
-
+$color-footer-bg: #f4f4f4;
+$color-footer-text: rgba(34, 34, 34, 0.71); // títulos e links do footer
+$color-footer-divider: rgba(40, 40, 40, 0.18); // linha vertical do footer
 
 // Tipografia
-$font-family: 'Poppins', sans-serif;
+$font-family: "Poppins", sans-serif;
 $fw-light: 300;
 $fw-regular: 400;
 $fw-medium: 500;

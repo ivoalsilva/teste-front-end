@@ -10,6 +10,7 @@ import { ProductShelf } from "./components/ProductShelf/ProductShelf";
 import { useProducts } from "./hooks/useProducts";
 import type { Product } from "./types/product";
 import { Newsletter } from "./components/Newsletter/Newsletter";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   const { products, isLoading, error } = useProducts();
@@ -48,7 +49,7 @@ function App() {
         </div>
       </main>
 
-      {/* Footer */}
+      <Footer />
 
       {selectedProduct && (
         <ProductModal
