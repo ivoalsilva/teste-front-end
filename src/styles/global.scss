@@ -9,6 +9,7 @@
 }
 
 body {
+  min-width: 1440px; // layout somente desktop, como o Figma: em telas menores aparece rolagem horizontal em vez de cortar o conteúdo
   font-family: $font-family;
   line-height: 1.5;
   color: $color-gray-dark;

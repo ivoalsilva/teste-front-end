@@ -2,7 +2,7 @@
 
 Página de e-commerce desenvolvida em **React + TypeScript + Sass** a partir do layout fornecido no Figma, com vitrine de produtos consumindo a API do teste e modal de detalhes do produto.
 
-![Página inicial](docs/preview.png)
+![Página inicial](docs/preview.webp)
 
 > Layout desktop (1440px), conforme o Figma fornecido, que não inclui versão mobile.
 
