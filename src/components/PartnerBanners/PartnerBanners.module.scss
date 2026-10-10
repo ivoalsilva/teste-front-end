@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .partners {
   display: flex;
@@ -20,11 +20,11 @@
   padding: 114px 0 0 44.18px;
   border-radius: 20px;
   overflow: hidden; // recorta a foto e o degradê nos cantos arredondados
-  background: #000000 url("../../assets/partner.webp") center / cover no-repeat;
+  background: #000000 url('../../assets/partner.webp') center / cover no-repeat;
 
   // Degradê escuro na parte de baixo (Rectangle 107 no Figma)
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     right: 0;
     bottom: 0;

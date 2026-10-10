@@ -1,9 +1,9 @@
-import logo from "../../assets/logo.svg";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
-import styles from "./Brands.module.scss";
+import logo from '../../assets/logo.svg'
+import { SectionTitle } from '../SectionTitle/SectionTitle'
+import styles from './Brands.module.scss'
 
 // O layout mostra 5 marcas, todas com o logo da Econverse
-const BRANDS = [1, 2, 3, 4, 5];
+const BRANDS = [1, 2, 3, 4, 5]
 
 export function Brands() {
   return (
@@ -20,5 +20,5 @@ export function Brands() {
         ))}
       </ul>
     </section>
-  );
+  )
 }

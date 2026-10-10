@@ -1,17 +1,17 @@
-import styles from "./PartnerBanners.module.scss";
+import styles from './PartnerBanners.module.scss'
 
 const PARTNERS = [
   {
     id: 1,
-    title: "Parceiros",
-    text: "Lorem ipsum dolor sit amet, consectetur",
+    title: 'Parceiros',
+    text: 'Lorem ipsum dolor sit amet, consectetur',
   },
   {
     id: 2,
-    title: "Parceiros",
-    text: "Lorem ipsum dolor sit amet, consectetur",
+    title: 'Parceiros',
+    text: 'Lorem ipsum dolor sit amet, consectetur',
   },
-];
+]
 
 export function PartnerBanners() {
   return (
@@ -26,5 +26,5 @@ export function PartnerBanners() {
         </article>
       ))}
     </section>
-  );
+  )
 }

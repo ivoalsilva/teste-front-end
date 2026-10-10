@@ -1,10 +1,10 @@
-import type { FormEvent } from "react";
-import styles from "./Newsletter.module.scss";
+import type { FormEvent } from 'react'
+import styles from './Newsletter.module.scss'
 
 export function Newsletter() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     // Sem back-end no teste: a validação nativa roda e o envio é interrompido aqui
-    event.preventDefault();
+    event.preventDefault()
   }
 
   return (
@@ -15,8 +15,7 @@ export function Newsletter() {
             Inscreva-se na nossa newsletter
           </h2>
           <p className={styles.text}>
-            Assine a nossa newsletter e receba as novidades e conteúdos
-            exclusivos da Econverse.
+            Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Econverse.
           </p>
         </div>
 
@@ -52,16 +51,11 @@ export function Newsletter() {
           </div>
 
           <label className={styles.terms}>
-            <input
-              type="checkbox"
-              name="terms"
-              className={styles.checkbox}
-              required
-            />
+            <input type="checkbox" name="terms" className={styles.checkbox} required />
             Aceito os termos e condições
           </label>
         </form>
       </div>
     </section>
-  );
+  )
 }

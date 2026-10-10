@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .header {
   position: relative;
@@ -94,7 +94,6 @@
   padding-left: 69px;
   box-shadow: 0 8px 16px rgba(57, 48, 19, 0.12);
 }
-
 
 .menuList {
   display: flex;

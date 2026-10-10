@@ -1,14 +1,14 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .banner {
   position: relative;
   height: 390px;
   // Cor de fundo enquanto a imagem carrega, para o texto branco continuar legível
-  background: #000000 url("../../assets/banner.webp") center / cover no-repeat;
+  background: #000000 url('../../assets/banner.webp') center / cover no-repeat;
 
   // Degradê escuro por trás dos textos (Rectangle 108 no Figma)
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

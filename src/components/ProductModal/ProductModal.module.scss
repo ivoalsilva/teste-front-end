@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .overlay {
   position: fixed;
@@ -71,7 +71,6 @@
   font-weight: $fw-semibold;
 }
 
-
 // Descrição + link (Frame 23201)
 .details {
   display: flex;
@@ -97,7 +96,6 @@
   line-height: 1;
   color: $color-blue;
 }
-
 
 // Quantidade + botão (Frame 23203)
 .actions {

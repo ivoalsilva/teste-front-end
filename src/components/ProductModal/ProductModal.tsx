@@ -1,49 +1,44 @@
-import { useEffect, useId, useRef, useState } from "react";
-import type { MouseEvent } from "react";
-import type { Product } from "../../types/product";
-import { formatPrice } from "../../utils/formatPrice";
-import styles from "./ProductModal.module.scss";
+import { useEffect, useId, useRef, useState } from 'react'
+import type { MouseEvent } from 'react'
+import type { Product } from '../../types/product'
+import { formatPrice } from '../../utils/formatPrice'
+import styles from './ProductModal.module.scss'
 
 interface ProductModalProps {
-  product: Product;
-  onClose: () => void;
+  product: Product
+  onClose: () => void
 }
 
 export function ProductModal({ product, onClose }: ProductModalProps) {
-  const { productName, descriptionShort, photo, price } = product;
-  const [quantity, setQuantity] = useState(1);
-  const titleId = useId();
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const { productName, descriptionShort, photo, price } = product
+  const [quantity, setQuantity] = useState(1)
+  const titleId = useId()
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") onClose();
+      if (event.key === 'Escape') onClose()
     }
 
     // Trava o scroll da página enquanto o modal está aberto
-    document.body.style.overflow = "hidden";
-    document.addEventListener("keydown", handleKeyDown);
-    closeButtonRef.current?.focus();
+    document.body.style.overflow = 'hidden'
+    document.addEventListener('keydown', handleKeyDown)
+    closeButtonRef.current?.focus()
 
     return () => {
-      document.body.style.overflow = "";
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [onClose]);
+      document.body.style.overflow = ''
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [onClose])
 
   function handleOverlayClick(event: MouseEvent<HTMLDivElement>) {
     // Fecha só se o clique foi no fundo escuro, não dentro do modal
-    if (event.target === event.currentTarget) onClose();
+    if (event.target === event.currentTarget) onClose()
   }
 
   return (
     <div className={styles.overlay} onClick={handleOverlayClick}>
-      <div
-        className={styles.modal}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={titleId}
-      >
+      <div className={styles.modal} role="dialog" aria-modal="true" aria-labelledby={titleId}>
         <button
           ref={closeButtonRef}
           type="button"
@@ -52,11 +47,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
           onClick={onClose}
         >
           <svg width="13" height="13" viewBox="0 0 13 13" aria-hidden="true">
-            <path
-              d="M1 1L12 12M12 1L1 12"
-              stroke="currentColor"
-              strokeWidth="2"
-            />
+            <path d="M1 1L12 12M12 1L1 12" stroke="currentColor" strokeWidth="2" />
           </svg>
         </button>
 
@@ -86,18 +77,13 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 disabled={quantity === 1}
                 onClick={() => setQuantity((current) => current - 1)}
               >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  aria-hidden="true"
-                >
+                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
                   <path d="M0 7H14" stroke="currentColor" strokeWidth="1.5" />
                 </svg>
               </button>
 
               <span className={styles.quantityValue} aria-live="polite">
-                {String(quantity).padStart(2, "0")}
+                {String(quantity).padStart(2, '0')}
               </span>
 
               <button
@@ -106,17 +92,8 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 aria-label="Aumentar quantidade"
                 onClick={() => setQuantity((current) => current + 1)}
               >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M0 7H14M7 0V14"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
+                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                  <path d="M0 7H14M7 0V14" stroke="currentColor" strokeWidth="1.5" />
                 </svg>
               </button>
             </div>
@@ -128,5 +105,5 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

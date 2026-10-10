@@ -1,33 +1,29 @@
-import facebookIcon from "../../assets/icons/facebook.svg";
-import instagramIcon from "../../assets/icons/instagram.svg";
-import linkedinIcon from "../../assets/icons/linkedin.svg";
-import logo from "../../assets/logo.svg";
-import styles from "./Footer.module.scss";
+import facebookIcon from '../../assets/icons/facebook.svg'
+import instagramIcon from '../../assets/icons/instagram.svg'
+import linkedinIcon from '../../assets/icons/linkedin.svg'
+import logo from '../../assets/logo.svg'
+import styles from './Footer.module.scss'
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", icon: instagramIcon },
-  { label: "Facebook", icon: facebookIcon },
-  { label: "LinkedIn", icon: linkedinIcon },
-];
+  { label: 'Instagram', icon: instagramIcon },
+  { label: 'Facebook', icon: facebookIcon },
+  { label: 'LinkedIn', icon: linkedinIcon },
+]
 
 const LINK_GROUPS = [
   {
-    title: "Institucional",
-    links: ["Sobre Nós", "Movimento", "Trabalhe conosco"],
+    title: 'Institucional',
+    links: ['Sobre Nós', 'Movimento', 'Trabalhe conosco'],
   },
   {
-    title: "Ajuda",
-    links: ["Suporte", "Fale Conosco", "Perguntas Frequentes"],
+    title: 'Ajuda',
+    links: ['Suporte', 'Fale Conosco', 'Perguntas Frequentes'],
   },
   {
-    title: "Termos",
-    links: [
-      "Termos e Condições",
-      "Política de Privacidade",
-      "Troca e Devolução",
-    ],
+    title: 'Termos',
+    links: ['Termos e Condições', 'Política de Privacidade', 'Troca e Devolução'],
   },
-];
+]
 
 export function Footer() {
   return (
@@ -73,9 +69,7 @@ export function Footer() {
         </nav>
       </div>
 
-      <p className={styles.copyright}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+      <p className={styles.copyright}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </footer>
-  );
+  )
 }

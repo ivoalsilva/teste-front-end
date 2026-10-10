@@ -1,14 +1,14 @@
-import logo from "../../assets/logo.svg";
-import boxIcon from "../../assets/icons/box.svg";
-import cardIcon from "../../assets/icons/card.svg";
-import cartIcon from "../../assets/icons/cart.svg";
-import crownIcon from "../../assets/icons/crown.svg";
-import heartIcon from "../../assets/icons/heart.svg";
-import searchIcon from "../../assets/icons/search.svg";
-import shieldIcon from "../../assets/icons/shield.svg";
-import truckIcon from "../../assets/icons/truck.svg";
-import userIcon from "../../assets/icons/user.svg";
-import styles from "./Header.module.scss";
+import logo from '../../assets/logo.svg'
+import boxIcon from '../../assets/icons/box.svg'
+import cardIcon from '../../assets/icons/card.svg'
+import cartIcon from '../../assets/icons/cart.svg'
+import crownIcon from '../../assets/icons/crown.svg'
+import heartIcon from '../../assets/icons/heart.svg'
+import searchIcon from '../../assets/icons/search.svg'
+import shieldIcon from '../../assets/icons/shield.svg'
+import truckIcon from '../../assets/icons/truck.svg'
+import userIcon from '../../assets/icons/user.svg'
+import styles from './Header.module.scss'
 
 const BENEFITS = [
   {
@@ -35,23 +35,23 @@ const BENEFITS = [
       </>
     ),
   },
-];
+]
 
 const ACTIONS = [
-  { icon: boxIcon, label: "Meus pedidos" },
-  { icon: heartIcon, label: "Favoritos" },
-  { icon: userIcon, label: "Minha conta" },
-  { icon: cartIcon, label: "Carrinho" },
-];
+  { icon: boxIcon, label: 'Meus pedidos' },
+  { icon: heartIcon, label: 'Favoritos' },
+  { icon: userIcon, label: 'Minha conta' },
+  { icon: cartIcon, label: 'Carrinho' },
+]
 
 const CATEGORIES = [
-  { label: "Todas categorias" },
-  { label: "Supermercado" },
-  { label: "Livros" },
-  { label: "Moda" },
-  { label: "Lançamentos" },
-  { label: "Ofertas do dia", highlight: true },
-];
+  { label: 'Todas categorias' },
+  { label: 'Supermercado' },
+  { label: 'Livros' },
+  { label: 'Moda' },
+  { label: 'Lançamentos' },
+  { label: 'Ofertas do dia', highlight: true },
+]
 
 export function Header() {
   return (
@@ -70,11 +70,7 @@ export function Header() {
           <img src={logo} alt="Econverse" width={139} />
         </a>
 
-        <form
-          className={styles.search}
-          role="search"
-          onSubmit={(event) => event.preventDefault()}
-        >
+        <form className={styles.search} role="search" onSubmit={(event) => event.preventDefault()}>
           <input
             type="search"
             name="q"
@@ -83,11 +79,7 @@ export function Header() {
             aria-label="Buscar produtos"
           />
 
-          <button
-            type="submit"
-            className={styles.searchButton}
-            aria-label="Buscar"
-          >
+          <button type="submit" className={styles.searchButton} aria-label="Buscar">
             <img src={searchIcon} alt="" />
           </button>
         </form>
@@ -109,7 +101,7 @@ export function Header() {
             <li key={category.label}>
               <a
                 href="#"
-                className={`${styles.menuLink} ${category.highlight ? styles.highlight : ""}`}
+                className={`${styles.menuLink} ${category.highlight ? styles.highlight : ''}`}
               >
                 {category.label}
               </a>
@@ -124,5 +116,5 @@ export function Header() {
         </ul>
       </nav>
     </header>
-  );
+  )
 }
