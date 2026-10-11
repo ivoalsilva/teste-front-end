@@ -32,8 +32,8 @@
 
 .image {
   width: 247px;
-  height: 192px;
-  object-fit: contain;
+  height: 192.2px;
+  object-fit: cover; // igual ao "Preencher" do Figma: amplia até cobrir a caixa e corta as sobras
 }
 
 // Coluna da direita
