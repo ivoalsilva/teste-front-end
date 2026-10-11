@@ -76,8 +76,13 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 disabled={quantity === 1}
                 onClick={() => setQuantity((current) => current - 1)}
               >
-                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                  <path d="M0 7H14" stroke="currentColor" strokeWidth="1.5" />
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" aria-hidden="true">
+                  <path
+                    d="M4.23047 9.81812H16.0766"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="square"
+                  />
                 </svg>
               </button>
 
@@ -91,8 +96,13 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 aria-label="Aumentar quantidade"
                 onClick={() => setQuantity((current) => current + 1)}
               >
-                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                  <path d="M0 7H14M7 0V14" stroke="currentColor" strokeWidth="1.5" />
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" aria-hidden="true">
+                  <path
+                    d="M10.1543 4.09082V15.5454M4.23047 9.81812H16.0766"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="square"
+                  />
                 </svg>
               </button>
             </div>

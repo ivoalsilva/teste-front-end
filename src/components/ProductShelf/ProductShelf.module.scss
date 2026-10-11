@@ -93,7 +93,6 @@
   border-radius: 50%;
   background: $color-white;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  color: $color-gray-dark;
 }
 
 .arrow:disabled {
@@ -105,9 +104,9 @@
 }
 
 .next {
-  right: -41.5px; // termina em X 1401.5 no Figma
+  right: -41.5px;
 
-  svg {
+  img {
     transform: rotate(180deg);
   }
 }

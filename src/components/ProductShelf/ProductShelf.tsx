@@ -3,18 +3,13 @@ import type { Product } from '../../types/product'
 import { ProductCard } from '../ProductCard/ProductCard'
 import { SectionTitle } from '../SectionTitle/SectionTitle'
 import styles from './ProductShelf.module.scss'
+import arrowIcon from '../../assets/icons/arrow.svg'
 
 const TABS = ['Celular', 'Acessórios', 'Tablets', 'Notebooks', 'TVs', 'Ver todos']
 
 // Largura do card (304) + espaço entre os cards (18)
 const CARD_STEP = 322
 const VISIBLE_CARDS = 4
-
-const arrowIcon = (
-  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" aria-hidden="true">
-    <path d="M7 1L1.5 6.5L7 12" stroke="currentColor" strokeWidth="1.5" />
-  </svg>
-)
 
 interface ProductShelfProps {
   title: string
@@ -75,7 +70,7 @@ export function ProductShelf({
           disabled={firstVisible === 0}
           onClick={() => move(-1)}
         >
-          {arrowIcon}
+          <img src={arrowIcon} alt="" />
         </button>
 
         <div className={styles.viewport}>
@@ -105,7 +100,7 @@ export function ProductShelf({
           disabled={firstVisible === lastStart}
           onClick={() => move(1)}
         >
-          {arrowIcon}
+          <img src={arrowIcon} alt="" />
         </button>
       </div>
     </section>
