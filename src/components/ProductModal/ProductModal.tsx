@@ -3,6 +3,7 @@ import type { MouseEvent } from 'react'
 import type { Product } from '../../types/product'
 import { formatPrice } from '../../utils/formatPrice'
 import styles from './ProductModal.module.scss'
+import closeIcon from '../../assets/icons/close.svg'
 
 interface ProductModalProps {
   product: Product
@@ -46,9 +47,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
           aria-label="Fechar"
           onClick={onClose}
         >
-          <svg width="13" height="13" viewBox="0 0 13 13" aria-hidden="true">
-            <path d="M1 1L12 12M12 1L1 12" stroke="currentColor" strokeWidth="2" />
-          </svg>
+          <img src={closeIcon} alt="" />
         </button>
 
         <img className={styles.image} src={photo} alt={productName} />

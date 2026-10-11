@@ -24,11 +24,10 @@
 
 .close {
   position: absolute;
-  top: 7px;
-  right: 19px;
+  top: 6px; // com o padding, o ícone fica a 17px do topo, como no Figma
+  right: 18px; // com o padding, o desenho termina a 29px da borda direita
   display: flex;
-  padding: 10px; // área de clique maior que o ícone de 13px
-  color: $color-icon;
+  padding: 10px; // área de clique maior que o ícone
 }
 
 .image {
