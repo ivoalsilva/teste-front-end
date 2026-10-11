@@ -1,10 +1,15 @@
+import { useState } from 'react'
 import type { FormEvent } from 'react'
 import styles from './Newsletter.module.scss'
 
 export function Newsletter() {
+  const [isSubscribed, setIsSubscribed] = useState(false)
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    // Sem back-end no teste: a validação nativa roda e o envio é interrompido aqui
+    // Sem back-end no teste: só chega aqui se a validação nativa passar
     event.preventDefault()
+    event.currentTarget.reset()
+    setIsSubscribed(true)
   }
 
   return (
@@ -19,7 +24,11 @@ export function Newsletter() {
           </p>
         </div>
 
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form
+          className={styles.form}
+          onSubmit={handleSubmit}
+          onChange={() => setIsSubscribed(false)}
+        >
           <div className={styles.fields}>
             <label className={styles.field}>
               <span className="visually-hidden">Nome</span>
@@ -50,10 +59,16 @@ export function Newsletter() {
             </button>
           </div>
 
-          <label className={styles.terms}>
-            <input type="checkbox" name="terms" className={styles.checkbox} required />
-            Aceito os termos e condições
-          </label>
+          <div className={styles.bottom}>
+            <label className={styles.terms}>
+              <input type="checkbox" name="terms" className={styles.checkbox} required />
+              Aceito os termos e condições
+            </label>
+
+            <p className={styles.success} role="status">
+              {isSubscribed && 'Inscrição realizada com sucesso!'}
+            </p>
+          </div>
         </form>
       </div>
     </section>

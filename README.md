@@ -2,6 +2,8 @@
 
 Página de e-commerce desenvolvida em **React + TypeScript + Sass** a partir do layout fornecido no Figma, com vitrine de produtos consumindo a API do teste e modal de detalhes do produto.
 
+**🔗 [Ver o projeto online](https://teste-front-end-two-mu.vercel.app/)**
+
 ![Página inicial](docs/preview.webp)
 
 > Layout desktop (1440px), conforme o Figma fornecido, que não inclui versão mobile.
@@ -75,11 +77,13 @@ src/
 └── utils/           # formatPrice
 ```
 
-## Decisões técnicas
-
 ### Consumo da API e CORS
 
-O servidor da API não envia o cabeçalho `Access-Control-Allow-Origin`, então uma requisição feita direto do navegador é bloqueada por CORS. Para continuar consumindo a URL oficial, o projeto usa o **proxy do Vite** (`vite.config.ts`): o navegador chama `/api/...` e o servidor do Vite repassa a requisição para `app.econverse.com.br`.
+O servidor da API não envia o cabeçalho ... repassa a requisição para `app.econverse.com.br`.
+
+Em produção (Vercel), o mesmo papel é feito por um _rewrite_ configurado no `vercel.json`.
+
+### Preço em centavos
 
 ### Preço em centavos
 
@@ -118,7 +122,7 @@ Fecha pelo botão, pelo clique fora e pela tecla `Esc`; trava o scroll da págin
 - **Preço antigo:** a API não fornece esse dado. O valor riscado no card é **ilustrativo** (preço + 10%), apenas para seguir o layout.
 - **Descrição:** o campo `descriptionShort` repete o nome do produto em todos os itens. O modal exibe o valor recebido sem alterações.
 - **Abas da vitrine:** a API não tem categorias, então as abas alteram apenas o estado visual.
-- **Links e botões sem destino:** os links usam `href="#"` (não há outras páginas no teste), o botão "Comprar" do modal não tem ação (o carrinho não faz parte do teste) e o formulário da newsletter usa a validação nativa do navegador, sem envio, por não haver back-end.
+- **Links e botões sem destino:** os links usam `href="#"` (não há outras páginas no teste), o botão "Comprar" do modal não tem ação (o carrinho não faz parte do teste) e o formulário da newsletter usa a validação nativa do navegador e exibe uma mensagem de sucesso, sem envio real, por não haver back-end.
 
 ## Ajustes intencionais em relação ao layout
 
@@ -138,6 +142,7 @@ O layout foi seguido pixel a pixel, conferindo as medidas do Figma no navegador.
 **Estados não definidos no layout:**
 
 - Checkbox da newsletter marcado: fundo amarelo.
+- Mensagem de sucesso da newsletter: exibida em amarelo após um envio válido, com o formulário limpo.
 - Contorno de foco na busca e cor do texto digitado nos campos.
 
 ## Próximos passos

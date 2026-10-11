@@ -36,7 +36,7 @@
   color: $color-white;
 }
 
-// Formulário (infos)
+// Formulário
 .form {
   display: flex;
   flex-direction: column;
@@ -80,7 +80,14 @@
   color: $color-button-text;
 }
 
-// Checkbox + texto (Select)
+// Linha de baixo: checkbox à esquerda, mensagem de sucesso à direita
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Checkbox + texto
 .terms {
   display: flex;
   align-items: center;
@@ -106,4 +113,12 @@
     border-color: $color-yellow;
     background: $color-yellow;
   }
+}
+
+// Mensagem de sucesso: não definida no Figma
+.success {
+  font-size: 14px;
+  font-weight: $fw-medium;
+  line-height: 21px;
+  color: $color-yellow;
 }
